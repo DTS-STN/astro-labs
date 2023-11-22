@@ -8,8 +8,8 @@ function changeUrlLocale() {
 ---
 
 <header>
-  <div class="flex justify-between items-center">
+  <div class="flex justify-between items-center max-w-7xl mx-auto px-2 py-5">
     <img src="/sig-blk.svg" class="h-8" />
-    <a href={changeUrlLocale()}>{lang === "en" ? "fr" : "en"}</a>
+    <a href={changeUrlLocale()} class="underline">{lang === "en" ? "Français" : "English"}</a>
   </div>
 </header>

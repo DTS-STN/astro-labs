@@ -20,9 +20,11 @@ const { title, lang } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
+  <body class="flex flex-col h-[100dvh]">
     <Header lang={lang} />
-    <slot />
+    <div class="grow max-w-7xl mx-auto px-2 py-5">
+      <slot />
+    </div>
     <Footer />
   </body>
 </html>
