@@ -1,0 +1,11 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import {useTranslations} from '../../i18n/utils'
+
+const {lang} = Astro.params
+const t = useTranslations(lang)
+---
+
+<Layout title={t('home')} lang={lang}>
+  <main></main>
+</Layout>

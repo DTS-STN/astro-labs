@@ -1,0 +1,15 @@
+---
+const { lang } = Astro.props;
+
+function changeUrlLocale() {
+  let url = new URL(Astro.url);
+  return url.pathname.replace(`/${lang}`, `/${lang === "en" ? "fr" : "en"}`);
+}
+---
+
+<header>
+  <div class="flex justify-between items-center">
+    <img src="/sig-blk.svg" class="h-8" />
+    <a href={changeUrlLocale()}>{lang === "en" ? "fr" : "en"}</a>
+  </div>
+</header>
