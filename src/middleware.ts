@@ -1,4 +1,9 @@
-export function onRequest({ request, redirect }, next) {
+import type { MiddlewareResponseHandler } from "astro";
+
+export const onRequest: MiddlewareResponseHandler = (
+  { request, redirect },
+  next
+) => {
   const url = new URL(request.url);
   const pathname = url.pathname;
 
@@ -6,5 +11,5 @@ export function onRequest({ request, redirect }, next) {
     return next();
   }
 
-  return Response.redirect(new URL("/404", request.url), 302);
-}
+  return new Response(null, { status: 404 });
+};
