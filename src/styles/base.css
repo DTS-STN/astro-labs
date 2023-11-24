@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+
+@layer base {
+  /* Font families */
+  h1,
+  h2 {
+    @apply font-display font-semibold;
+  }
+  h3,
+  h4,
+  h5 {
+    @apply font-display font-semibold;
+  }
+  h6 {
+    @apply font-display;
+  }
+  p,
+  li,
+  button {
+    @apply font-body;
+  }
+
+  /* Font sizes */
+  h1 {
+    @apply text-h1;
+  }
+  h2 {
+    @apply text-h2;
+  }
+  h3 {
+    @apply text-h3;
+  }
+  h4 {
+    @apply text-h4;
+  }
+  h5,
+  p {
+    @apply text-p;
+  }
+  h6 {
+    @apply text-base;
+  }
+
+  /*Focused*/
+  h1:focus {
+    @apply ring-1;
+  }
+  @screen lg {
+    h1 {
+      @apply text-h1l;
+    }
+    h2 {
+      @apply text-h2l;
+    }
+  }
+
+  /* Lists */
+  ul {
+    @apply list-disc;
+  }
+  ol {
+    @apply list-decimal;
+  }
+  li {
+    @apply ml-10;
+    @apply text-[20px];
+  }
+
+  /* Content Element Styles */
+  h1,
+  h2 {
+    margin-top: 48px;
+    margin-bottom: 24px;
+  }
+  h3,
+  h4,
+  h5 {
+    margin-bottom: 16px;
+  }
+  p + p {
+    margin-top: 2rem;
+  }
+  ul + p {
+    margin-top: 2rem;
+  }
+}

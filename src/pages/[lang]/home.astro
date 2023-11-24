@@ -8,29 +8,52 @@ const t = useTranslations(lang);
 
 <Layout title={t("home")} lang={lang}>
   <main>
-    <div>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt id modi
-      et. Neque in dicta fugit cum illo harum veniam eius officiis hic! Placeat
-      atque cumque, ipsa illum repellat earum cupiditate fugit suscipit
-      veritatis error aspernatur reiciendis mollitia?
+    <div class="border-b-[1.5px] pb-2 border-b-red-900">
+      <h1 class="text-4xl">Service Canada Labs</h1>
     </div>
-    <div>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt id modi
-      et. Neque in dicta fugit cum illo harum veniam eius officiis hic! Placeat
-      atque cumque, ipsa illum repellat earum cupiditate fugit suscipit
-      veritatis error aspernatur reiciendis mollitia?
+
+    <div class="flex gap-10">
+      <div>
+        <p>Help us make government digital services simple and easy to use.</p>
+        <p>
+          Service Canada Labs is an experimental corner of Canada.ca where we
+          work on new ways of serving you. Here, you can explore projects in
+          their early stages and help us improve them. We might even stop
+          working on some ideas if we learn they're not adding value and not
+          meeting people's needs.
+        </p>
+      </div>
+      <img src="/splash.png" class="h-72" alt="" />
     </div>
+
+    <h2>Your feedback can shape tomorrow's services</h2>
+    <p>Here is how you can help:</p>
+    <ul>
+      <li>try out our projects</li>
+      <li>give your feedback</li>
+    </ul>
+
+    <h2>Explore our projects</h2>
     <div>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt id modi
-      et. Neque in dicta fugit cum illo harum veniam eius officiis hic! Placeat
-      atque cumque, ipsa illum repellat earum cupiditate fugit suscipit
-      veritatis error aspernatur reiciendis mollitia?
+      <div class="relative min-w-[290px] sm:pl-[24px] pl-[16px]">
+        <div class="absolute top-3 sm:left-3.5 left-1.5 bg-white py-[4px]">
+          <img src="/info_img.svg" alt="info icon" />
+        </div>
+        <div
+          class="overflow-auto border-l-[6px] border-cyan-600 pl-[24px] py-[17px] leading-8"
+        >
+          <h3 class="">This site features works in progress</h3>
+          <p>
+            You can't actually apply for benefits or services through this
+            experimental website. To apply for benefits and services, visit <a
+              class="underline text-canada-footer-font hover:text-canada-footer-hover-font-blue"
+              href="https://www.canada.ca/en/employment-social-development/corporate/portfolio/service-canada.html"
+              >Service Canada</a
+            >.
+          </p>
+        </div>
+      </div>
     </div>
-    <div>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt id modi
-      et. Neque in dicta fugit cum illo harum veniam eius officiis hic! Placeat
-      atque cumque, ipsa illum repellat earum cupiditate fugit suscipit
-      veritatis error aspernatur reiciendis mollitia?
-    </div>
+
   </main>
 </Layout>

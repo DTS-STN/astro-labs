@@ -1,3 +1,7 @@
+---
+import "../styles/base.css";
+---
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -13,14 +17,21 @@
       class="bg-[url('/splash.png')] bg-contain bg-no-repeat bg-center w-full h-full grid place-content-center"
     >
       <div class="bg-white border pt-10">
-        <img src="/sig-blk.svg" class="h-6 m-5" />
-        <div class="flex items-center justify-center gap-5 h-32">
+        <img src="/sig-blk.svg" class="h-6 sm:h-8 my-4 mx-12" />
+        <div class="flex w-max container mx-auto py-6 font-display">
+          <h2 class="text-p text-right xl:text-h4 mr-6 w-32 xl:w-40" lang="en">
+            Service Canada Labs
+          </h2><h2 class="text-p xl:text-h4 w-32 xl:w-40" lang="fr">
+            Laboratoires de Service Canada
+          </h2>
+        </div>
+        <div class="flex items-center justify-center gap-5 h-32 font-display text-lg">
           <a
-            class="bg-slate-700 text-white hover:bg-slate-900 py-2 px-4 rounded border-b-2 border-black"
+            class="bg-slate-700 text-white hover:bg-slate-900 py-2 px-8 rounded border-b-2 border-black"
             href="/en/home">English</a
           >
           <a
-            class="bg-slate-700 text-white hover:bg-slate-900 py-2 px-4 rounded border-b-2 border-black"
+            class="bg-slate-700 text-white hover:bg-slate-900 py-2 px-8 rounded border-b-2 border-black"
             href="/fr/home">Français</a
           >
         </div>

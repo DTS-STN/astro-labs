@@ -1,9 +1,6 @@
 import type { MiddlewareResponseHandler } from "astro";
 
-export const onRequest: MiddlewareResponseHandler = (
-  { request, redirect },
-  next
-) => {
+export const onRequest: MiddlewareResponseHandler = ({ request }, next) => {
   const url = new URL(request.url);
   const pathname = url.pathname;
 
