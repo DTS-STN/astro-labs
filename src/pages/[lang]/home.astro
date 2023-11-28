@@ -1,9 +1,15 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { useTranslations } from "../../i18n/utils";
+import { getCollection } from "astro:content";
+import Card from "../../components/Card.astro";
 
 const { lang } = Astro.params;
 const t = useTranslations(lang);
+
+let projects = await getCollection(lang)
+
+console.log(projects)
 ---
 
 <Layout title={t("home")} lang={lang}>
@@ -53,7 +59,10 @@ const t = useTranslations(lang);
           </p>
         </div>
       </div>
+      <ul class="grid lg:grid-cols-2 gap-4 list-none ml-0 mt-10">
+        
+        {projects.map((project) => <Card props={{slug: project.slug,...project.data}} />)}
+      </ul>
     </div>
-
   </main>
 </Layout>

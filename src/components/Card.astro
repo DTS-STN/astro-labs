@@ -1,0 +1,21 @@
+---
+const { props } = Astro.props;
+---
+
+<li class="list-none ml-0">
+  <a href={props.slug}
+    ><div class="h-full border rounded-md pb-4 hover:cursor-pointer">
+      <div class="h-80 flex justify-center">
+        <img src={`/${props.img}`} />
+      </div><div class="flex">
+        <p
+          class="block font-display text-lg font-bold underline underline-offset-[6px] my-1 py-2 px-6 items-center"
+        >
+          {props.title}
+        </p>
+      </div><p class="mx-6 text-lg">
+        {props.summary}
+      </p>
+    </div></a
+  >
+</li>

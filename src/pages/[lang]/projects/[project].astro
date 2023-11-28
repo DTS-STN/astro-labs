@@ -1,0 +1,8 @@
+---
+import { getCollection } from "astro:content";
+
+const { lang, project } = Astro.params;
+console.log(await getCollection(lang, ({slug})=>slug.includes(`/${project}`)))
+---
+
+<h1>Project: {project}</h1>
